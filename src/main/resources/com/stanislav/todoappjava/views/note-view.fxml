@@ -10,10 +10,11 @@
 <VBox spacing="20" stylesheets="@styles/note.css" fx:controller="com.stanislav.todoappjava.controllers.NoteController" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml">
         <HBox alignment="CENTER_LEFT">
-            <StackPane>
+            <StackPane alignment="CENTER_LEFT">
                 <Text styleClass="page-title" fx:id="title" />
                 <TextField fx:id="titleField"
                            visible="false"
+                           style="-fx-font-size: 24px;"
                            promptText="Заголовок"
                 />
             </StackPane>
@@ -24,31 +25,34 @@
                 <Button fx:id="backButton" onMouseClicked="#onBackBtnClick" styleClass="button-primary">Назад</Button>
             </HBox>
         </HBox>
-    <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER">
-        <VBox>
-            <Text fx:id="content" styleClass="page-content" />
+    <StackPane>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER">
+            <VBox>
+                <Text fx:id="content" styleClass="page-content" />
+            </VBox>
+        </ScrollPane>
+
+        <VBox
+                spacing="15"
+                visible="false"
+                fx:id="contentEditContainer"
+        >
+
+            <TextArea fx:id="contentField"
+                      promptText="Текст заметки..."
+                      style="-fx-font-size: 18px;"
+                      VBox.vgrow="ALWAYS"
+            />
+
+            <HBox spacing="15" alignment="CENTER_RIGHT">
+                <Button onMouseClicked="#onCancelClick" text="Отмена"
+                        style="-fx-background-color: #333; -fx-text-fill: white; -fx-font-size: 14px"/>
+
+                <Button onMouseClicked="#onSaveClick" text="Сохранить"
+                        style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px"/>
+            </HBox>
+
         </VBox>
-    </ScrollPane>
-
-    <VBox
-          spacing="15"
-          visible="false"
-          fx:id="contentEditContainer"
-          alignment="TOP_CENTER">
-
-        <TextArea fx:id="contentField"
-                  promptText="Текст заметки..."
-                  VBox.vgrow="ALWAYS"
-        />
-
-        <HBox spacing="15" alignment="CENTER_RIGHT">
-            <Button onMouseClicked="#onCancelClick" text="Отмена"
-                    style="-fx-background-color: #333; -fx-text-fill: white;"/>
-
-            <Button onMouseClicked="#onSaveClick" text="Сохранить"
-                    style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
-        </HBox>
-
-    </VBox>
+    </StackPane>
 
 </VBox>

@@ -33,7 +33,8 @@
 }
 
 .notes-root {
-    -fx-background-color: #121212;
+    -fx-background-color: #212121;
+    -fx-border-radius: 8;
 }
 
 .tile-pane {
@@ -52,12 +53,12 @@
 
 /* ScrollPane фон */
 .scroll-pane {
-    -fx-background: #121212;
+   -fx-background-color: #212121;
     -fx-border-radius: 6;
 }
 
 .scroll-pane .viewport {
-    -fx-background-color: #121212;
+    -fx-background-color: #212121;
 }
 
 /* Горизонтальный и вертикальный ScrollBar */

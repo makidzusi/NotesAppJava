@@ -18,10 +18,7 @@
         <Button onMouseClicked="#onAddButtonClick" styleClass="button-primary">Добавить заметку</Button>
     </HBox>
     <ScrollPane
-
                 fitToWidth="true"
-                style="-fx-background-color: #121212;"
-
                 styleClass="notes-root">
         <TilePane fx:id="notesContainer"
                   hgap="20"
