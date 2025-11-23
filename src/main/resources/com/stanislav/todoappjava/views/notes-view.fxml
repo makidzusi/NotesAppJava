@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.stanislav.todoappjava.controllers.NotesController"
+      spacing="10"
+      stylesheets="@styles/shared.css"
+      >
+    <Text style="-fx-font-size: 24px; -fx-fill: white;">Все заметки</Text>
+    <HBox spacing="20" alignment="CENTER">
+        <TextField  fx:id="textField" HBox.hgrow="ALWAYS" promptText="Название заметки..."/>
+        <Button onMouseClicked="#onAddButtonClick" styleClass="button-primary">Добавить заметку</Button>
+    </HBox>
+    <ScrollPane
+
+                fitToWidth="true"
+                style="-fx-background-color: #121212;"
+
+                styleClass="notes-root">
+        <TilePane fx:id="notesContainer"
+                  hgap="20"
+                  vgap="20"
+                  prefColumns="3"
+                  tileAlignment="TOP_LEFT">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <!-- Карточки заметок будут добавляться динамически через контроллер -->
+        </TilePane>
+    </ScrollPane>
+
+</VBox>

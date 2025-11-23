@@ -1,0 +1,14 @@
+.login-card {
+    -fx-background-color: #1E1E1E;
+    -fx-background-radius: 12;
+    -fx-padding: 35 40;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 20, 0, 0, 4);
+}
+
+.hyperlink {
+    -fx-text-fill: #90caf9;
+}
+
+#error-label {
+    -fx-text-fill: #ff5252;
+}

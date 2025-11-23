@@ -1,0 +1,19 @@
+.text-area {
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: white;
+    -fx-highlight-fill: #2196F3;     /* цвет выделения текста */
+    -fx-highlight-text-fill: white;  /* цвет текста при выделении */
+    -fx-prompt-text-fill: #777;
+    -fx-border-color: #333;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8;
+}
+
+.text-area:focused {
+    -fx-border-color: #2196F3;
+}
+
+.text-area .content {
+    -fx-background-color: #1e1e1e; /* фиксим реальный фон внутри */
+}

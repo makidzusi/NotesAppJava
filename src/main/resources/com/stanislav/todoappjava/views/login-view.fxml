@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.stanislav.todoappjava.controllers.LoginController"
+            stylesheets="@styles/login.css, @styles/shared.css"
+            styleClass="root">
+
+    <center>
+        <VBox alignment="CENTER"
+              spacing="20"
+              maxWidth="400"
+              maxHeight="400"
+              styleClass="login-card"
+              BorderPane.alignment="CENTER">
+
+            <Label fx:id="formLabel" text="Вход" styleClass="label-title"/>
+
+            <TextField fx:id="usernameField"
+                       promptText="Логин"
+                       maxWidth="280"
+                       styleClass="text-input"/>
+
+            <PasswordField fx:id="passwordField"
+                           promptText="Пароль"
+                           maxWidth="280"
+                           styleClass="text-input"/>
+
+            <Label fx:id="errorLabel"
+                   id="error-label"
+                   visible="false"/>
+
+            <Button text="Войти"
+                    onAction="#onLoginClick"
+                    maxWidth="280"
+                    fx:id="actionButton"
+                    styleClass="button-primary"/>
+
+            <Hyperlink text="Создать аккаунт"
+                       fx:id="hyperlink"
+                       onAction="#onRegisterClick"/>
+        </VBox>
+    </center>
+
+</BorderPane>

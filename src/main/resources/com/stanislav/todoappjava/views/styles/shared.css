@@ -1,0 +1,177 @@
+.root {
+    -fx-background-color: #121212;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.label-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.text-input {
+    -fx-background-color: #2C2C2C;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-background-radius: 6;
+    -fx-padding: 10;
+    -fx-border-color: #3a3a3a;
+    -fx-border-radius: 6;
+}
+
+.button-primary {
+    -fx-background-color: #3f51b5;
+    -fx-background-radius: 6;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.button-primary:hover {
+    -fx-background-color: #5c6bc0;
+}
+
+.notes-root {
+    -fx-background-color: #121212;
+}
+
+.tile-pane {
+    -fx-padding: 20;
+}
+
+.v-box {
+    -fx-background-color: #1e1e1e;
+    -fx-background-radius: 12;
+    -fx-padding: 10;
+}
+
+.v-box:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 2);
+}
+
+/* ScrollPane фон */
+.scroll-pane {
+    -fx-background: #121212;
+    -fx-border-radius: 6;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #121212;
+}
+
+/* Горизонтальный и вертикальный ScrollBar */
+.scroll-pane .scroll-bar:vertical,
+.scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: #1e1e1e; /* фон полосы */
+    -fx-padding: 0;
+}
+
+/* Ползунок */
+.scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #3f51b5; /* основной цвет темы */
+    -fx-background-radius: 6;
+}
+
+/* Ползунок при наведении */
+.scroll-pane .scroll-bar .thumb:hover {
+    -fx-background-color: #5c6bc0;
+}
+
+/* Стрелки (если они видимы) */
+.scroll-pane .scroll-bar .increment-button,
+.scroll-pane .scroll-bar .decrement-button {
+    -fx-background-color: #1e1e1e;
+    -fx-background-radius: 6;
+}
+
+
+.text-area {
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: white;
+    -fx-highlight-fill: #2196F3;     /* цвет выделения текста */
+    -fx-highlight-text-fill: white;  /* цвет текста при выделении */
+    -fx-prompt-text-fill: #777;
+    -fx-border-color: #333;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8;
+}
+
+.text-area:focused {
+    -fx-border-color: #2196F3;
+}
+
+.text-area .content {
+    -fx-background-color: #1e1e1e; /* фиксим реальный фон внутри */
+}
+
+.text-area .scroll-bar:vertical {
+    -fx-background-color: #1e1e1e;
+}
+
+.text-area .scroll-bar:vertical .thumb {
+    -fx-background-color: #333;
+}
+
+.text-area .scroll-bar:vertical:hover .thumb {
+    -fx-background-color: #444;
+}
+
+.context-menu .menu-item:focused,
+.context-menu .menu-item:armed,
+.context-menu .menu-item:selected {
+    -fx-background-color: transparent;
+}
+
+/* Общий стиль меню */
+.context-menu {
+    -fx-background-color: #2e2e2e;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 10, 0.2, 0, 4);
+}
+
+/* Пункт меню */
+.context-menu .menu-item {
+    -fx-padding: 8px 14px;
+    -fx-cursor: hand;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: #454545;
+}
+
+/* Текст */
+.context-menu .label {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 13px;
+}
+
+/* Разделитель */
+.context-menu .separator:horizontal .line {
+    -fx-border-color: #555555;
+}
+
+/* Иконка */
+.context-menu .menu-item .graphic {
+    -fx-padding: 0 6px 0 0;
+}
+
+.dialog-pane {
+    -fx-background-color: #2c2c2c;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #f5f5f5;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #454545;
+    -fx-text-fill: #e0e0e0;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #5a5a5a;
+}
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.stanislav.todoappjava.controllers.NoteCardController"
+      fx:id="cardContainer"
+      spacing="10"
+      prefWidth="400"
+      prefHeight="400"
+      maxHeight="400"
+      minHeight="400"
+      style="-fx-background-color: #1e1e1e; -fx-background-radius: 12; -fx-padding: 10;">
+
+    <VBox VBox.vgrow="ALWAYS" spacing="10">
+        <Label fx:id="titleLabel" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 16px;"/>
+        <Text fx:id="contentText" wrappingWidth="300" style="-fx-fill: #cccccc;"/>
+        <Label fx:id="dateLabel" style="-fx-text-fill: #888888; -fx-font-size: 12px;"/>
+    </VBox>
+
+    <HBox spacing="10">
+        <Button fx:id="favoriteBtn" onMouseClicked="#onToggleFavourite" text="★" style="-fx-background-color: transparent; -fx-font-size: 16px;"/>
+        <Button fx:id="openBtn" onMouseClicked="#onOpenNote" text="Открыть" style="-fx-background-color: #3f51b5; -fx-text-fill: white; -fx-background-radius: 6; -fx-padding: 5 10;"/>
+    </HBox>
+</VBox>

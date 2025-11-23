@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox spacing="20" stylesheets="@styles/note.css" fx:controller="com.stanislav.todoappjava.controllers.NoteController" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml">
+        <HBox alignment="CENTER_LEFT">
+            <StackPane>
+                <Text styleClass="page-title" fx:id="title" />
+                <TextField fx:id="titleField"
+                           visible="false"
+                           promptText="Заголовок"
+                />
+            </StackPane>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+            <HBox spacing="20">
+                <Button onMouseClicked="#onEditBtnClick"  styleClass="button-primary">Редактировать</Button>
+                <Button fx:id="backButton" onMouseClicked="#onBackBtnClick" styleClass="button-primary">Назад</Button>
+            </HBox>
+        </HBox>
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER">
+        <VBox>
+            <Text fx:id="content" styleClass="page-content" />
+        </VBox>
+    </ScrollPane>
+
+    <VBox
+          spacing="15"
+          visible="false"
+          fx:id="contentEditContainer"
+          alignment="TOP_CENTER">
+
+        <TextArea fx:id="contentField"
+                  promptText="Текст заметки..."
+                  VBox.vgrow="ALWAYS"
+        />
+
+        <HBox spacing="15" alignment="CENTER_RIGHT">
+            <Button onMouseClicked="#onCancelClick" text="Отмена"
+                    style="-fx-background-color: #333; -fx-text-fill: white;"/>
+
+            <Button onMouseClicked="#onSaveClick" text="Сохранить"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+        </HBox>
+
+    </VBox>
+
+</VBox>

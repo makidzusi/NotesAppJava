@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.stanislav.todoappjava.controllers.MainController"
+            stylesheets="@styles/shared.css, @styles/main.css"
+            styleClass="root">
+
+    <!-- Сайдбар слева -->
+    <left>
+        <VBox
+              spacing="20"
+              styleClass="sidebar"
+              prefWidth="350"
+        >
+
+            <Label text="Меню" styleClass="sidebar-title"/>
+
+            <Button text="Заметки" prefWidth="Infinity"  fx:id="notesButton"  onAction="#showNotes" styleClass="sidebar-button"/>
+            <Button text="Граф зависимостей" prefWidth="Infinity" onAction="#showGraph" styleClass="sidebar-button"/>
+            <Button text="Избранные" prefWidth="Infinity" fx:id="favoritesButton" onAction="#showFavorites" styleClass="sidebar-button"/>
+            <Button text="Архив" prefWidth="Infinity" fx:id="trashButton" onAction="#showTrash" styleClass="sidebar-button"/>
+            <Button text="Выйти" prefWidth="Infinity" fx:id="logoutButton" onAction="#logout" styleClass="sidebar-button"/>
+
+        </VBox>
+    </left>
+
+    <!-- Контентная зона -->
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area">
+            <!-- Контент будет подгружаться динамически -->
+        </StackPane>
+    </center>
+
+</BorderPane>
